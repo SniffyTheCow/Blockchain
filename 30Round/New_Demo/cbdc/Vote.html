@@ -1,0 +1,17 @@
+{{ block title }}
+    Decision Making
+{{ endblock }}
+{{ block content }}
+
+{% if player.role == "the Red Player" %}
+    <p style="color: red;">You are {{ player.role }}</p>
+{% else %}
+    <p style="color: blue;">You are {{ player.role }}</p>
+{% endif %}
+
+    <p>{{ group.Participation_Count }} players chose to participate.</p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}

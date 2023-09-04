@@ -1,0 +1,57 @@
+{{ block title }}
+    Results
+{{ endblock }}
+
+{{ block content }}
+
+<style>
+    #customer th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+#customer {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customer td, #customer th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customer tr:nth-child(even){background-color: #f2f2f2;}
+
+#customer tr:hover {background-color: #ddd;}
+
+#customer th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+
+Your payoff is {{ player.payoff }}
+
+<table id ="customer">
+  <tr>
+    <th> Validating Votes </th>
+    <th> Non-Validating Votes </th>
+  </tr>
+  <tr>
+    <td> {{ group.yes_votes }} </td>
+    <td> {{ group.no_votes }}  </td>
+  </tr>
+</table>
+
+    {{ next_button }}
+{{ endblock }}
+
+

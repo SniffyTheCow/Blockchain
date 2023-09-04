@@ -1,0 +1,19 @@
+{{ block title }}
+    Validation Stage
+{{ endblock }}
+{{ block content }}
+
+
+{% if player.role == "the Red Trader" %}
+    <p style="color: red;">You are {{ player.role }}</p>
+{% else %}
+    <p style="color: blue;">You are {{ player.role }}</p>
+{% endif %}
+
+
+    <p>{{ group.participation_count }} players chose to participate.</p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}
